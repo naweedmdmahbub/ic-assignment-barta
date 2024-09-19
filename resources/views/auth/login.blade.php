@@ -42,8 +42,9 @@
       <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
         <form
           class="space-y-6"
-          action="#"
+          action="{{url('/login')}}"
           method="POST">
+          @csrf
           <div>
             <label
               for="email"
@@ -101,7 +102,7 @@
         <p class="mt-10 text-center text-sm text-gray-500">
           Don't have an account yet?
           <a
-            href="./register.html"
+            href="{{ route('register') }}"
             class="font-semibold leading-6 text-black hover:text-black"
             >Sign Up</a
           >

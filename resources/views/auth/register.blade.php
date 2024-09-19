@@ -40,8 +40,9 @@
       <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
         <form
           class="space-y-6"
-          action="#"
+          action="{{ route('register.user') }}"
           method="POST">
+          @csrf
           <!-- First Name -->
           <div>
             <label
@@ -61,7 +62,7 @@
             </div>
           </div>
 
-          <!-- First Name -->
+          <!-- Last Name -->
           <div>
             <label
               for="last_name"
@@ -130,7 +131,7 @@
         <p class="mt-10 text-center text-sm text-gray-500">
           Already a member?
           <a
-            href="./login.html"
+            href="{{ route('login') }}"
             class="font-semibold leading-6 text-black hover:text-black"
             >Sign In</a
           >
